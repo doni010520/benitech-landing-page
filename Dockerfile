@@ -1,8 +1,12 @@
 FROM nginx:alpine
 
-# Copia os arquivos do site para o local correto
+# Copia os arquivos do site
 COPY index.html /usr/share/nginx/html/
 COPY logo.png /usr/share/nginx/html/
+COPY favicon.ico /usr/share/nginx/html/
+COPY favicon-16x16.png /usr/share/nginx/html/
+COPY favicon-32x32.png /usr/share/nginx/html/
+COPY apple-touch-icon.png /usr/share/nginx/html/
 
 # Remove a configuração padrão
 RUN rm /etc/nginx/conf.d/default.conf
