@@ -1,16 +1,19 @@
 FROM nginx:alpine
 
-# Copia os arquivos do site
+# Copia os arquivos do site para o local correto
 COPY index.html /usr/share/nginx/html/
 COPY logo.png /usr/share/nginx/html/
 
-# Configuração do Nginx para rodar na porta 5656
+# Remove a configuração padrão
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Cria a nova configuração na porta 5656
 RUN echo 'server { \
     listen 5656; \
     server_name _; \
+    root /usr/share/nginx/html; \
+    index index.html; \
     location / { \
-        root /usr/share/nginx/html; \
-        index index.html; \
         try_files $uri $uri/ /index.html; \
     } \
     location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ { \
