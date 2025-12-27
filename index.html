@@ -1,44 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parceria Benitech Lab e Gestores de tráfego</title>
+    <title>Programa de Parceria - Benitech Lab</title>
     
-    <!-- Meta Description -->
-    <meta name="description" content="Resolva o problema de atendimento dos seus clientes, acabe com o churn por falta de resultado e adicione uma nova receita recorrente à sua agência com IA.">
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Aumente a conversão dos seus clientes e gere uma nova fonte de lucro com agentes de IA da Benitech Lab">
+    <meta name="robots" content="noindex, nofollow">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Open Graph / WhatsApp / Facebook -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://benitechlab.com/">
-    <meta property="og:title" content="Parceria Benitech Lab e Gestores de tráfego">
-    <meta property="og:description" content="Resolva o problema de atendimento dos seus clientes, acabe com o churn por falta de resultado e adicione uma nova receita recorrente à sua agência com IA.">
+    <meta property="og:title" content="Programa de Parceria - Benitech Lab">
+    <meta property="og:description" content="Aumente a conversão dos seus clientes e gere uma nova fonte de lucro">
     <meta property="og:image" content="https://benitechlab.com/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://benitechlab.com/">
-    <meta property="twitter:title" content="Parceria Benitech Lab e Gestores de tráfego">
-    <meta property="twitter:description" content="Resolva o problema de atendimento dos seus clientes, acabe com o churn por falta de resultado e adicione uma nova receita recorrente à sua agência com IA.">
-    <meta property="twitter:image" content="https://benitechlab.com/og-image.png">
     
     <!-- Meta Domain Verification -->
     <meta name="facebook-domain-verification" content="rcga83uv5gw0y2ek7v0nxqfzwvcdyu" />
-    
-    <!-- Preconnect to improve performance -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet"></noscript>
     
     <!-- Meta Pixel Code -->
     <script>
@@ -59,546 +38,664 @@
     <!-- End Meta Pixel Code -->
     
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .gradient-text {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1629 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 24px;
+        }
+        
+        .badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #10b981);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+        
         .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-
-        .chat-bubble {
-            position: relative;
-            padding: 12px 16px;
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+        }
+        
+        .step-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        
+        .step {
+            display: none;
+        }
+        
+        .step.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .input-group {
+            margin-bottom: 24px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+        
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
-        .chat-left { background: #334155; color: white; border-bottom-left-radius: 2px; align-self: flex-start; }
-        .chat-right { background: #059669; color: white; border-bottom-right-radius: 2px; align-self: flex-end; margin-left: auto; }
-
-        /* Grid Background Pattern */
-        .bg-grid {
-            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
-                              linear-gradient(to bottom, #1e293b 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        
+        input:focus {
+            outline: none;
+            border-color: #10b981;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .radio-option {
+            position: relative;
+        }
+        
+        .radio-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .radio-option label {
+            display: block;
+            padding: 18px 20px;
+            background: rgba(15, 23, 42, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 0;
+        }
+        
+        .radio-option input[type="radio"]:checked + label {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: #10b981;
+            color: #10b981;
+        }
+        
+        .radio-option label:hover {
+            border-color: rgba(16, 185, 129, 0.5);
+            background: rgba(15, 23, 42, 0.6);
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 8px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #94a3b8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        .success-screen {
+            display: none;
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .success-screen.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .checkmark svg {
+            width: 48px;
+            height: 48px;
+            stroke: #fff;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            animation: drawCheck 0.5s ease 0.3s forwards;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+        }
+        
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .glass-card {
+                padding: 32px 24px;
+            }
+            
+            .button-group {
+                flex-direction: column-reverse;
+            }
+        }
+        
+        .floating-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            top: -200px;
+            right: -200px;
+        }
+        
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            bottom: -150px;
+            left: -150px;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-green-500 selection:text-black">
+<body>
+    <!-- Floating Background Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
 
-    <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 top-0 left-0 border-b border-slate-800 bg-slate-900/90 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Benitech Lab" width="80" height="80" loading="eager" class="h-20 w-auto object-contain rounded-lg">
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#problema" class="hover:text-green-400 transition px-3 py-2 rounded-md text-sm font-medium">O Problema</a>
-                        <a href="#solucoes" class="hover:text-green-400 transition px-3 py-2 rounded-md text-sm font-medium">Soluções</a>
-                        <a href="#tecnologia" class="hover:text-green-400 transition px-3 py-2 rounded-md text-sm font-medium">Tecnologia</a>
-                        <a href="#lucro" class="hover:text-green-400 transition px-3 py-2 rounded-md text-sm font-medium">Seu Lucro</a>
-                    </div>
-                </div>
-                <div>
-                    <a href="formulario/" onclick="fbq('track', 'InitiateCheckout');" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 rounded-lg font-bold text-sm transition shadow-lg shadow-green-900/20">
-                        Seja Parceiro
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <span class="badge">
+            PARA DONOS DE AGÊNCIA & GESTORES DE TRÁFEGO
+        </span>
+        <h1 class="hero-title">
+            Aumente a Conversão dos seus Clientes<br>
+            <span style="background: linear-gradient(to right, #10b981, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">e Gere uma Nova Fonte de Lucro.</span>
+        </h1>
+        <p class="hero-subtitle">
+            Resolva o problema de leads frios, acabe com o churn por "falta de resultado" e adicione uma nova receita recorrente à sua agência com a tecnologia da <strong>Benitech Lab</strong>.
+        </p>
+    </div>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="absolute inset-0 bg-grid z-0 opacity-20"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-green-400 text-xs font-bold mb-8 animate-fade-in-up">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                PARA DONOS DE AGÊNCIA & GESTORES DE TRÁFEGO
+    <!-- Form Container -->
+    <div class="form-container">
+        <div class="glass-card">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 25%"></div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
-                Aumente a Conversão dos seus Clientes<br class="hidden md:block" />
-                <span class="gradient-text">e Gere uma Nova Fonte de Lucro.</span>
-            </h1>
-            <p class="text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Resolva o problema de leads frios, acabe com o churn por "falta de resultado" e adicione uma nova receita recorrente à sua agência com a tecnologia da <strong>Benitech Lab</strong>.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="formulario/" onclick="fbq('track', 'InitiateCheckout');" class="bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-10 rounded-xl text-lg transition transform hover:scale-105 shadow-xl shadow-green-900/20 flex items-center justify-center gap-2">
-                    Quero Ser Parceiro <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="#solucoes" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition border border-slate-700 flex items-center justify-center gap-2">
-                    Conhecer os Produtos
-                </a>
-            </div>
-            
-            <!-- Social Proof / Tech Stack strip -->
-            <div class="mt-20 pt-10 border-t border-slate-800/50 flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition duration-500">
-                <div class="flex items-center gap-2"><i data-lucide="facebook" class="w-6 h-6"></i> <span class="font-bold">Meta Pixel API</span></div>
-                <div class="flex items-center gap-2"><i data-lucide="bar-chart-2" class="w-6 h-6"></i> <span class="font-bold">Google GA4</span></div>
-                <div class="flex items-center gap-2"><i data-lucide="message-circle" class="w-6 h-6"></i> <span class="font-bold">WhatsApp API</span></div>
-                <div class="flex items-center gap-2"><i data-lucide="table" class="w-6 h-6"></i> <span class="font-bold">Sheets CRM</span></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- PROBLEM SECTION -->
-    <section id="problema" class="py-24 bg-slate-900 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-8 leading-tight">O ciclo vicioso do <span class="text-red-500">Churn de Contrato</span></h2>
-                    <p class="text-lg text-slate-400 mb-8">Você sabe como funciona: você entrega o lead, o cliente demora para atender, e a culpa sobra para o gestor de tráfego.</p>
+            <form id="multiStepForm">
+                <!-- Step 1: Nome -->
+                <div class="step active" data-step="1">
+                    <span class="step-number">PASSO 1 DE 4</span>
+                    <h2>Qual o seu nome?</h2>
+                    <p class="subtitle">Vamos começar nos conhecendo melhor</p>
                     
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <div class="p-3 bg-red-500/10 rounded-xl text-red-500 shrink-0"><i data-lucide="thermometer-snowflake" class="w-6 h-6"></i></div>
-                            <div>
-                                <strong class="text-white text-lg block">O Lead Esfria em 5 Minutos</strong>
-                                <p class="text-slate-400 text-sm">Se o cliente não responder na hora, o lead compra no concorrente.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="p-3 bg-red-500/10 rounded-xl text-red-500 shrink-0"><i data-lucide="trending-down" class="w-6 h-6"></i></div>
-                            <div>
-                                <strong class="text-white text-lg block">O CPA Dispara</strong>
-                                <p class="text-slate-400 text-sm">Baixa conversão no WhatsApp mata o ROI da campanha.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="p-3 bg-red-500/10 rounded-xl text-red-500 shrink-0"><i data-lucide="alert-triangle" class="w-6 h-6"></i></div>
-                            <div>
-                                <strong class="text-white text-lg block">Cliente Cancela</strong>
-                                <p class="text-slate-400 text-sm">Ele diz que "o tráfego não funciona" e você perde o contrato.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Interactive Simulation Visual -->
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-red-500 relative">
-                    <div class="absolute top-4 right-4 text-red-500 animate-pulse"><i data-lucide="activity" class="w-6 h-6"></i></div>
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold text-white">A Realidade do Cliente</h3>
-                        <p class="text-slate-400 text-sm">Sem automação</p>
+                    <div class="input-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                        <span class="error-message" id="nomeError">Por favor, digite seu nome completo</span>
                     </div>
-                    <div class="space-y-4 max-w-sm mx-auto">
-                        <div class="chat-bubble chat-right bg-slate-700 opacity-70">Olá, quero agendar...</div>
-                        <div class="flex items-center justify-center gap-2 py-2">
-                             <span class="h-px w-8 bg-slate-700"></span>
-                             <span class="text-[10px] text-red-400 font-mono font-bold">3 HORAS DE ATRASO</span>
-                             <span class="h-px w-8 bg-slate-700"></span>
-                        </div>
-                        <div class="chat-bubble chat-left">Oi! Podemos falar agora?</div>
-                        <div class="chat-bubble chat-right bg-red-500/20 border border-red-500/50 text-red-200 font-semibold">
-                            <i data-lucide="x" class="w-3 h-3 inline mr-1"></i> Já fechei com outro.
-                        </div>
+
+                    <div class="button-group">
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continuar</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SOLUTIONS INTRO -->
-    <section id="solucoes" class="py-24 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-900/10 to-transparent pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">3 Produtos de IA Prontos para Vender</h2>
-            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
-                Não entregue apenas o lead. Entregue a agenda cheia, leads qualificados e caixa rápido. Selecionei as 3 soluções mais validadas para sua agência.
-            </p>
-        </div>
-
-        <!-- PRODUCT 1: Secretária Inteligente -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
-            <div class="glass-card p-10 md:p-16 rounded-3xl border border-blue-500/30 bg-gradient-to-br from-slate-900 to-blue-900/10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">PRODUTO 01</span>
-                            <span class="text-blue-400 text-sm font-bold tracking-widest">CLIENTES DE AGENDA</span>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-6">A Secretária Inteligente</h3>
-                        <p class="text-lg text-slate-300 mb-6 font-medium">
-                            Público Alvo: Dentistas, Médicos, Nutricionistas, Clínicas de Estética, Psicólogos.
-                        </p>
-                        <p class="text-base text-slate-400 mb-8 border-l-2 border-slate-700 pl-4">
-                            <strong>A Dor que resolve:</strong> A secretária humana não atende no almoço, fim de semana ou depois das 18h. O lead do tráfego esfria e não agenda.
-                        </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-blue-500"></i> Atende 24/7 no WhatsApp</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-blue-500"></i> Tira dúvidas de preço e procedimento</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-blue-500"></i> Agenda diretamente (Fluxo de Agendamentos)</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-blue-500"></i> Confirma presença automaticamente no dia anterior</li>
-                        </ul>
-                        <div class="p-5 bg-slate-800 rounded-lg border-l-4 border-blue-500 shadow-lg">
-                            <p class="text-xs text-blue-400 uppercase font-bold mb-2">Argumento de Venda para o Gestor:</p>
-                            <p class="italic text-slate-300 text-sm">
-                                "Doutor, vou instalar um sistema que agenda pacientes para você enquanto a clínica está fechada. Acaba com o problema de lead sem resposta."
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Visual Mockup -->
-                    <div class="bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl max-w-sm mx-auto w-full">
-                        <div class="flex items-center gap-3 border-b border-slate-700 pb-4 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white">IA</div>
-                            <div>
-                                <div class="font-bold text-sm">Clínica Sorriso</div>
-                                <div class="text-xs text-green-400">Online agora (Dom, 22h)</div>
-                            </div>
-                        </div>
-                        <div class="space-y-3 text-sm">
-                            <div class="chat-bubble chat-right">Quero ver horários para clareamento.</div>
-                            <div class="chat-bubble chat-left">Tenho Quinta às 18:30 ou Sábado às 09:00. Qual prefere?</div>
-                            <div class="chat-bubble chat-right">Quinta, por favor.</div>
-                            <div class="chat-bubble chat-left border-l-4 border-green-500 bg-slate-800">
-                                <strong>✅ Agendado!</strong><br>
-                                <span class="text-xs opacity-75">Quinta-feira, 18:30 confirmada.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PRODUCT 2: Qualificador High-Ticket -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
-            <div class="glass-card p-10 md:p-16 rounded-3xl border border-purple-500/30 bg-gradient-to-bl from-slate-900 to-purple-900/10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Step 2: WhatsApp -->
+                <div class="step" data-step="2">
+                    <span class="step-number">PASSO 2 DE 4</span>
+                    <h2>Qual o seu WhatsApp?</h2>
+                    <p class="subtitle">Para entrarmos em contato com você</p>
                     
-                    <!-- Visual Mockup (Left Side to alternate) -->
-                    <div class="order-2 md:order-1 bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl w-full">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="font-bold text-green-400 flex gap-2"><i data-lucide="sheet"></i> CRM Live</div>
-                            <div class="text-xs bg-green-900 text-green-300 px-2 py-0.5 rounded">Live Data</div>
-                        </div>
-                        <table class="w-full text-sm text-left text-slate-300">
-                            <thead class="bg-slate-800 text-slate-400 text-xs uppercase">
-                                <tr><th class="p-3">Nome</th><th class="p-3">Renda</th><th class="p-3">Status</th></tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-700">
-                                <tr class="bg-green-900/10">
-                                    <td class="p-3">Dr. Roberto</td>
-                                    <td class="p-3">R$ 1.5M</td>
-                                    <td class="p-3"><span class="bg-green-500 text-black text-[10px] px-1 rounded font-bold">HOT</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3">João Silva</td>
-                                    <td class="p-3">-</td>
-                                    <td class="p-3"><span class="bg-red-900 text-red-300 text-[10px] px-1 rounded">FRIO</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="mt-4 flex gap-3 text-xs text-slate-400">
-                            <span class="flex gap-1"><i data-lucide="map-pin" class="w-4 h-4 text-purple-500"></i> Jardins, SP</span>
-                            <span class="flex gap-1"><i data-lucide="zap" class="w-4 h-4 text-yellow-500"></i> Pixel Fired</span>
-                        </div>
+                    <div class="input-group">
+                        <label for="whatsapp">Número do WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
+                        <span class="error-message" id="whatsappError">Por favor, digite um número válido</span>
                     </div>
 
-                    <div class="order-1 md:order-2">
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">PRODUTO 02</span>
-                            <span class="text-purple-400 text-sm font-bold tracking-widest">IMOBILIÁRIAS & SERVIÇOS</span>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-6">O Qualificador High-Ticket</h3>
-                        <p class="text-lg text-slate-300 mb-6 font-medium">
-                            Público Alvo: Corretores de Imóveis, Vendedores de Seguro, Consórcios, Energia Solar, Advogados.
-                        </p>
-                        <p class="text-base text-slate-400 mb-8 border-l-2 border-slate-700 pl-4">
-                            <strong>A Dor que resolve:</strong> O time comercial perde tempo falando com gente sem dinheiro ou fora da região. O Gestor de Tráfego é culpado por trazer "lead sujo".
-                        </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-purple-500"></i> Faz a triagem inicial (perguntas de filtro)</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-purple-500"></i> Captura Geolocalização e Dados Financeiros</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-purple-500"></i> Joga os dados na Planilha (CRM) e devolve conversão p/ Pixel</li>
-                        </ul>
-                        <div class="p-5 bg-slate-800 rounded-lg border-l-4 border-purple-500 shadow-lg">
-                            <p class="text-xs text-purple-400 uppercase font-bold mb-2">Argumento de Venda para o Gestor:</p>
-                            <p class="italic text-slate-300 text-sm">
-                                "Vou blindar seu time comercial. A IA atende todo mundo, peneira os curiosos e só passa para o vendedor quem realmente tem potencial de compra."
-                            </p>
-                        </div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continuar</button>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- PRODUCT 3: Reativador de Base (LTV) -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card p-10 md:p-16 rounded-3xl border border-green-500/30 bg-gradient-to-br from-slate-900 to-green-900/10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">PRODUTO 03</span>
-                            <span class="text-green-400 text-sm font-bold tracking-widest">CAIXA RÁPIDO (LTV)</span>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-6">O Reativador de Base</h3>
-                        <p class="text-lg text-slate-300 mb-6 font-medium">
-                            Público Alvo: Qualquer empresa com lista de clientes antigos ou leads parados.
-                        </p>
-                        <p class="text-base text-slate-400 mb-8 border-l-2 border-slate-700 pl-4">
-                            <strong>A Dor que resolve:</strong> O cliente tem 5.000 contatos no celular da empresa e não faz nada com isso porque "dá trabalho mandar mensagem um por um".
-                        </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-green-500"></i> Disparo em Massa seguro e cadenciado</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-green-500"></i> A IA assume o atendimento de quem responder a oferta</li>
-                            <li class="flex items-center gap-3 text-slate-300"><i data-lucide="check-circle-2" class="text-green-500"></i> Recuperação de Vendas: Identifica interesse e fecha o pedido</li>
-                        </ul>
-                        <div class="p-5 bg-slate-800 rounded-lg border-l-4 border-green-500 shadow-lg">
-                            <p class="text-xs text-green-400 uppercase font-bold mb-2">Argumento de Venda para o Gestor:</p>
-                            <p class="italic text-slate-300 text-sm">
-                                "Você está sentado em cima de uma mina de ouro. Vamos pegar sua lista de ex-clientes e fazer uma campanha de disparo hoje para gerar caixa imediato?"
-                            </p>
-                        </div>
-                    </div>
+                <!-- Step 3: Clientes -->
+                <div class="step" data-step="3">
+                    <span class="step-number">PASSO 3 DE 4</span>
+                    <h2>Quantos clientes você atende?</h2>
+                    <p class="subtitle">Isso nos ajuda a entender o tamanho da sua operação</p>
                     
-                    <!-- Visual Mockup (Right Side) -->
-                    <div class="bg-slate-900 rounded-2xl p-8 border border-green-500/30 shadow-[0_0_30px_rgba(34,197,94,0.15)] text-center w-full">
-                        <div class="inline-flex p-4 bg-green-500/20 rounded-full mb-6">
-                            <i data-lucide="rocket" class="w-12 h-12 text-green-500"></i>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="clientes1" name="clientes" value="Começando agora" required>
+                            <label for="clientes1">Começando agora</label>
                         </div>
-                        <h4 class="text-2xl font-bold text-white mb-2">Campanha de Reativação</h4>
-                        <div class="flex justify-between mt-8 border-t border-slate-700 pt-6">
-                            <div>
-                                <div class="text-2xl font-bold text-white">5k</div>
-                                <div class="text-xs text-slate-500 uppercase">Base Antiga</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-green-400">18%</div>
-                                <div class="text-xs text-slate-500 uppercase">Conversão</div>
-                            </div>
-                            <div>
-                                <div class="text-2xl font-bold text-white">R$ 0</div>
-                                <div class="text-xs text-slate-500 uppercase">Custo Ads</div>
-                            </div>
+                        <div class="radio-option">
+                            <input type="radio" id="clientes2" name="clientes" value="Até 5 clientes">
+                            <label for="clientes2">Até 5 clientes</label>
                         </div>
-                        <div class="mt-6 bg-green-900/20 text-green-300 py-2 rounded-lg text-sm font-bold">
-                            Gerando Caixa Imediato
+                        <div class="radio-option">
+                            <input type="radio" id="clientes3" name="clientes" value="Até 10 clientes">
+                            <label for="clientes3">Até 10 clientes</label>
                         </div>
+                        <div class="radio-option">
+                            <input type="radio" id="clientes4" name="clientes" value="Até 15 clientes">
+                            <label for="clientes4">Até 15 clientes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="clientes5" name="clientes" value="Mais de 20 clientes">
+                            <label for="clientes5">Mais de 20 clientes</label>
+                        </div>
+                    </div>
+                    <span class="error-message" id="clientesError">Por favor, selecione uma opção</span>
+
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Continuar</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- MANYCHAT KILLER SECTION -->
-    <section class="py-24 bg-slate-900 relative overflow-hidden border-y border-slate-800">
-        <div class="absolute inset-0 bg-grid opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="glass-card p-10 md:p-16 rounded-3xl border border-red-500/30 bg-gradient-to-r from-slate-900 to-red-900/10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold mb-6 border border-red-500/20">
-                            <i data-lucide="alert-circle" class="w-4 h-4"></i> PARE DE GASTAR EM DÓLAR
-                        </div>
-                        <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">Adeus, Manychat.</h2>
-                        <p class="text-xl text-slate-300 mb-8">
-                            Por que pagar uma fortuna em dólar por uma ferramenta limitada? Entregue para seu cliente uma estrutura proprietária, sem limite de leads e com custo fixo em reais.
-                        </p>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-center justify-between p-4 bg-slate-800 rounded-xl border border-slate-700 opacity-50">
-                                <span class="text-slate-400 flex items-center gap-2"><i data-lucide="x" class="text-red-500"></i> Manychat (5k leads)</span>
-                                <span class="text-slate-400 font-mono text-sm">~$45 USD/mês</span>
-                            </div>
-                            <div class="flex items-center justify-between p-4 bg-slate-800 rounded-xl border border-slate-700 opacity-50">
-                                <span class="text-slate-400 flex items-center gap-2"><i data-lucide="x" class="text-red-500"></i> Zapier (Starter)</span>
-                                <span class="text-slate-400 font-mono text-sm">~$29 USD/mês</span>
-                            </div>
-                             <div class="flex items-center justify-between p-5 bg-green-900/20 rounded-xl border border-green-500 transform scale-105 shadow-lg">
-                                <span class="text-white font-bold flex items-center gap-2"><i data-lucide="check-circle" class="text-green-400"></i> Sua Solução de IA</span>
-                                <span class="text-green-400 font-mono font-bold text-lg">INCLUSO (R$ 0)</span>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Step 4: Estrutura Comercial -->
+                <div class="step" data-step="4">
+                    <span class="step-number">PASSO 4 DE 4</span>
+                    <h2>Estrutura Comercial</h2>
+                    <p class="subtitle">Você já possui um setor comercial bem estruturado na sua agência e está pronto para ofertar os agentes de IA aos seus clientes?</p>
                     
-                    <!-- Visual Feature List -->
-                    <div class="relative">
-                         <div class="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl blur opacity-20"></div>
-                         <div class="bg-slate-900 p-8 rounded-2xl border border-slate-700 relative">
-                            <h3 class="font-bold text-xl text-white mb-6 flex items-center gap-2">
-                                <i data-lucide="copy" class="text-green-500"></i> Clone do Manychat Incluso
-                            </h3>
-                            <ul class="space-y-4 text-slate-300">
-                                <li class="flex items-center gap-3">
-                                    <div class="p-2 bg-slate-800 rounded-lg text-blue-400"><i data-lucide="message-square" class="w-5 h-5"></i></div>
-                                    <span>Responde Comentários no Post e Reels</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <div class="p-2 bg-slate-800 rounded-lg text-pink-400"><i data-lucide="instagram" class="w-5 h-5"></i></div>
-                                    <span>Automação de Direct (DM)</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <div class="p-2 bg-slate-800 rounded-lg text-green-400"><i data-lucide="users" class="w-5 h-5"></i></div>
-                                    <span>Leads Ilimitados (Sem taxa por contato)</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <div class="p-2 bg-slate-800 rounded-lg text-purple-400"><i data-lucide="webhook" class="w-5 h-5"></i></div>
-                                    <span>Webhooks Ilimitados (Sem Zapier)</span>
-                                </li>
-                            </ul>
-                         </div>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="estrutura1" name="estrutura" value="Sim, tenho processo comercial e faço upsell facilmente" required>
+                            <label for="estrutura1">Sim, tenho processo comercial e faço upsell facilmente</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="estrutura2" name="estrutura" value="Tenho processo, mas dificuldade em vender mais pros clientes">
+                            <label for="estrutura2">Tenho processo, mas dificuldade em vender mais pros clientes</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="estrutura3" name="estrutura" value="Não tenho processo comercial estruturado">
+                            <label for="estrutura3">Não tenho processo comercial estruturado</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="estrutura4" name="estrutura" value="Tenho dificuldade em vender e reter clientes">
+                            <label for="estrutura4">Tenho dificuldade em vender e reter clientes</label>
+                        </div>
+                    </div>
+                    <span class="error-message" id="estruturaError">Por favor, selecione uma opção</span>
+
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()">Voltar</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Finalizar</button>
                     </div>
                 </div>
+            </form>
+
+            <!-- Success Screen -->
+            <div class="success-screen" id="successScreen">
+                <div class="checkmark">
+                    <svg viewBox="0 0 52 52">
+                        <polyline points="14 27 22 35 38 19"/>
+                    </svg>
+                </div>
+                <h2 style="margin-bottom: 16px;">Obrigado!</h2>
+                <p class="subtitle">Recebemos suas informações. Em breve entraremos em contato pelo WhatsApp!</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- TECH GUARANTEE -->
-    <section id="tecnologia" class="py-24 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16">Tecnologia que seu Tráfego Ama</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-blue-500 transition group">
-                    <i data-lucide="target" class="w-10 h-10 text-blue-500 mx-auto mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-white">Pixel Meta</h3>
-                    <p class="text-xs text-slate-400 mt-2">API de Conversão Nativa</p>
-                </div>
-                <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-orange-500 transition group">
-                    <i data-lucide="bar-chart-2" class="w-10 h-10 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-white">Google GA4</h3>
-                    <p class="text-xs text-slate-400 mt-2">Tracking Server-Side</p>
-                </div>
-                <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-green-500 transition group">
-                    <i data-lucide="table" class="w-10 h-10 text-green-500 mx-auto mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-white">Google Sheets</h3>
-                    <p class="text-xs text-slate-400 mt-2">Dados em Tempo Real</p>
-                </div>
-                <div class="p-6 bg-slate-800 rounded-2xl border border-slate-700 hover:border-purple-500 transition group">
-                    <i data-lucide="map" class="w-10 h-10 text-purple-500 mx-auto mb-4 group-hover:scale-110 transition"></i>
-                    <h3 class="font-bold text-white">Geolocalização</h3>
-                    <p class="text-xs text-slate-400 mt-2">Validação Automática</p>
-                </div>
-            </div>
-            
-            <div class="mt-12 inline-flex items-center gap-3 px-6 py-3 bg-slate-800/50 rounded-full border border-slate-700 text-sm text-slate-300">
-                <i data-lucide="shield-check" class="text-green-500"></i>
-                Substitui Manychat, Zapier e Agendadores. <span class="text-white font-bold">Zero custo em Dólar.</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFIT SECTION -->
-    <section id="lucro" class="py-24 relative">
-        <div class="absolute inset-0 bg-grid opacity-10"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-4xl md:text-6xl font-black mb-4">Quanto Você Ganha?</h2>
-            <p class="text-xl text-slate-400 mb-16">Um modelo de sociedade real: Ganhe na entrada e construa sua Renda Passiva.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Cost -->
-                <div class="bg-slate-800/30 p-10 rounded-3xl border border-slate-700 text-left backdrop-blur-sm">
-                    <h3 class="text-xl font-bold text-slate-400 mb-2">O Seu Cliente Paga</h3>
-                    <div class="flex items-baseline gap-2 mb-6">
-                        <span class="text-sm text-slate-500">R$</span>
-                        <span class="text-5xl font-bold text-white">2.000</span>
-                    </div>
-                    <div class="space-y-4 border-t border-slate-700 pt-6">
-                        <div class="flex justify-between text-sm text-slate-300">
-                            <span>Setup & Instalação</span> <span>Incluso</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-slate-300">
-                            <span>Mensalidade Recorrente</span> <span class="font-bold text-white">R$ 1.000/mês</span>
-                        </div>
-                        <div class="mt-4 p-3 bg-slate-800 rounded-lg text-xs text-slate-400 italic">
-                            *Valor ainda inferior a 50% do custo de um estagiário ou secretária humana.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Profit -->
-                <div class="bg-slate-900 p-10 rounded-3xl border-2 border-green-500 text-left shadow-2xl relative overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                    <div class="absolute top-0 right-0 bg-green-500 text-black text-xs font-bold px-4 py-2 rounded-bl-xl uppercase">Comissão Dupla</div>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <h3 class="text-sm font-bold text-green-400 mb-1 uppercase tracking-wider">Na Entrada (50%)</h3>
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-sm text-green-600 font-bold">R$</span>
-                                <span class="text-5xl font-black text-white tracking-tighter">1.000</span>
-                            </div>
-                            <p class="text-xs text-slate-400 mt-1">Pix na hora do fechamento.</p>
-                        </div>
-                        <div class="border-l border-slate-700 pl-6">
-                            <h3 class="text-sm font-bold text-blue-400 mb-1 uppercase tracking-wider">Todo Mês (30%)</h3>
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-sm text-blue-600 font-bold">R$</span>
-                                <span class="text-5xl font-black text-white tracking-tighter">300</span>
-                            </div>
-                            <p class="text-xs text-slate-400 mt-1">Recorrência Passiva Vitalícia.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-slate-800 rounded-xl p-5 space-y-3 border border-slate-700">
-                        <p class="text-sm font-bold text-white mb-2">Potencial de Renda Passiva:</p>
-                        <div class="flex justify-between text-sm text-slate-300 border-b border-slate-700 pb-2">
-                            <span>5 Clientes Ativos</span>
-                            <span class="text-green-400 font-bold">+ R$ 1.500/mês</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-slate-300 border-b border-slate-700 pb-2">
-                            <span>10 Clientes Ativos</span>
-                            <span class="text-green-400 font-bold">+ R$ 3.000/mês</span>
-                        </div>
-                        <div class="flex justify-between text-sm text-slate-300 pt-1">
-                            <span>20 Clientes Ativos</span>
-                            <span class="text-green-400 font-bold">+ R$ 6.000/mês</span>
-                        </div>
-                    </div>
-                    
-                    <p class="text-center text-xs text-slate-500 mt-4">
-                        Nota: Todo o trabalho de manutenção técnica é meu. Sua renda é 100% passiva.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CTA -->
-    <footer id="contato" class="py-20 bg-slate-950 border-t border-slate-900">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white">Vamos Implementar?</h2>
-            <p class="text-xl text-slate-400 mb-12">
-                Estou selecionando <strong class="text-white">5 parceiros estratégicos</strong> esta semana. Traga seu cliente mais difícil e vamos rodar um teste real.
-            </p>
-            
-            <a href="formulario/" onclick="fbq('track', 'InitiateCheckout');" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-5 px-12 rounded-2xl text-xl transition shadow-xl shadow-green-900/30 hover:shadow-green-900/50 transform hover:scale-105">
-                <i data-lucide="user-plus" class="w-6 h-6"></i>
-                Preencher Formulário de Parceria
-            </a>
-            
-            <div class="mt-16 flex justify-center gap-8 opacity-30">
-                 <i data-lucide="cpu" class="w-8 h-8"></i>
-                 <i data-lucide="zap" class="w-8 h-8"></i>
-                 <i data-lucide="globe" class="w-8 h-8"></i>
-            </div>
-            <p class="mt-8 text-sm text-slate-600">© 2025 Benitech Lab. Tecnologia Proprietária.</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
-        lucide.createIcons();
+        let currentStep = 1;
+        const totalSteps = 4;
+        const formData = {};
+
+        // Máscara para WhatsApp
+        document.getElementById('whatsapp').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length <= 11) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+                if (value.length === 14) {
+                    value = value.replace(/^(\d{2})(\d{4})(\d{4}).*/, '($1) $2-$3');
+                }
+            }
+            e.target.value = value;
+        });
+
+        function nextStep() {
+            if (validateStep(currentStep)) {
+                saveStepData(currentStep);
+                sendToN8N(currentStep);
+                
+                // Track custom events
+                if (currentStep === 1) fbq('trackCustom', 'Step1Completed');
+                if (currentStep === 2) fbq('trackCustom', 'Step2Completed');
+                if (currentStep === 3) fbq('trackCustom', 'Step3Completed');
+                
+                currentStep++;
+                updateStep();
+            }
+        }
+
+        function prevStep() {
+            currentStep--;
+            updateStep();
+        }
+
+        function updateStep() {
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.querySelector(`.step[data-step="${currentStep}"]`).classList.add('active');
+            
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function validateStep(step) {
+            let isValid = true;
+            
+            if (step === 1) {
+                const nome = document.getElementById('nome').value.trim();
+                if (nome.length < 3) {
+                    document.getElementById('nomeError').classList.add('show');
+                    isValid = false;
+                } else {
+                    document.getElementById('nomeError').classList.remove('show');
+                }
+            }
+            
+            if (step === 2) {
+                const whatsapp = document.getElementById('whatsapp').value;
+                if (whatsapp.replace(/\D/g, '').length < 10) {
+                    document.getElementById('whatsappError').classList.add('show');
+                    isValid = false;
+                } else {
+                    document.getElementById('whatsappError').classList.remove('show');
+                }
+            }
+            
+            if (step === 3) {
+                const clientes = document.querySelector('input[name="clientes"]:checked');
+                if (!clientes) {
+                    document.getElementById('clientesError').classList.add('show');
+                    isValid = false;
+                } else {
+                    document.getElementById('clientesError').classList.remove('show');
+                }
+            }
+            
+            if (step === 4) {
+                const estrutura = document.querySelector('input[name="estrutura"]:checked');
+                if (!estrutura) {
+                    document.getElementById('estruturaError').classList.add('show');
+                    isValid = false;
+                } else {
+                    document.getElementById('estruturaError').classList.remove('show');
+                }
+            }
+            
+            return isValid;
+        }
+
+        function saveStepData(step) {
+            if (step === 1) {
+                formData.nome = document.getElementById('nome').value.trim();
+            }
+            if (step === 2) {
+                formData.whatsapp = document.getElementById('whatsapp').value;
+            }
+            if (step === 3) {
+                formData.clientes = document.querySelector('input[name="clientes"]:checked').value;
+            }
+            if (step === 4) {
+                formData.estrutura = document.querySelector('input[name="estrutura"]:checked').value;
+            }
+        }
+
+        async function sendToN8N(step) {
+            // Gera ID único para este lead (apenas no step 1)
+            if (step === 1) {
+                const leadId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                formData.id = leadId;
+                
+                // Captura parâmetros UTM e origem do tráfego
+                const urlParams = new URLSearchParams(window.location.search);
+                formData.utm_source = urlParams.get('utm_source') || 'direct';
+                formData.utm_medium = urlParams.get('utm_medium') || 'none';
+                formData.utm_campaign = urlParams.get('utm_campaign') || 'none';
+                formData.utm_content = urlParams.get('utm_content') || 'none';
+                formData.utm_term = urlParams.get('utm_term') || 'none';
+                formData.fbclid = urlParams.get('fbclid') || null;
+                formData.gclid = urlParams.get('gclid') || null;
+            }
+            
+            const N8N_WEBHOOK_URL = 'https://criadordigital-n8n-webhook.zsvt2k.easypanel.host/webhook/trafego_pago';
+            
+            const payload = {
+                ...formData,
+                etapa_atual: step,
+                timestamp: new Date().toISOString(),
+                completo: step === 4
+            };
+            
+            try {
+                const response = await fetch(N8N_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+                
+                console.log('Dados enviados ao N8N:', payload);
+            } catch (error) {
+                console.error('Erro ao enviar para N8N:', error);
+            }
+        }
+
+        async function submitForm() {
+            if (validateStep(4)) {
+                saveStepData(4);
+                await sendToN8N(4);
+                
+                // Track Lead conversion
+                fbq('track', 'Lead');
+                
+                // Show success screen
+                document.getElementById('multiStepForm').style.display = 'none';
+                document.getElementById('progressBar').parentElement.style.display = 'none';
+                document.getElementById('successScreen').classList.add('show');
+            }
+        }
     </script>
 </body>
 </html>
