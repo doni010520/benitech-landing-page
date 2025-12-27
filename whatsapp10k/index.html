@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp 10K - Transforme Seu WhatsApp em uma máquina de vendas!</title>
+    <meta name="description" content="Aprenda o método exato que Adonias Santos usa para faturar alto vendendo serviços pelo WhatsApp.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #25D366;
+            --primary-dark: #128C7E;
+            --secondary: #FF3D00;
+            --blue-accent: #1E5BA8;
+            --blue-light: #4A9EFF;
+            --dark: #0A1628;
+            --dark-lighter: #1A2B45;
+            --text: #E8EDF5;
+            --text-muted: #9BAAC4;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(135deg, #25D366 0%, #1E5BA8 100%);
+            --gradient-red: linear-gradient(135deg, #FF3D00 0%, #FF6B35 100%);
+            --gradient-green: linear-gradient(135deg, #25D366 0%, #5BF595 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(37, 211, 102, 0.6); }
+        }
+        
+        /* Urgency Bar */
+        .urgency-bar {
+            background: var(--gradient-red);
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 61, 0, 0.3);
+        }
+        
+        /* Hero Section - Estilo VENDE-C */
+        .hero-vendec {
+            position: relative;
+            min-height: 700px;
+            padding: 80px 20px 100px;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/background-tech.jpg') center center;
+            background-size: cover;
+            z-index: 0;
+            opacity: 0.85;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(18, 140, 126, 0.6) 100%);
+            z-index: 1;
+        }
+        
+        .logo-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .logo-text {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(48px, 8vw, 72px);
+            color: #25D366;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 20px;
+        }
+        
+        .hero-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Card Esquerdo (Preto) */
+        .hero-card-left {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card-label {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .card-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(48px, 6vw, 80px);
+            line-height: 0.9;
+            color: #4A9EFF;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .card-headline {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.2;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+        
+        .card-subtitle {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+        
+        .card-subtitle strong {
+            color: var(--white);
+            font-weight: 700;
+        }
+        
+        .cta-button-yellow {
+            display: inline-block;
+            background: var(--gradient-green);
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 18px;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .cta-button-yellow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+            background: linear-gradient(135deg, #34E87F 0%, #6BFFA7 100%);
+        }
+        
+        .price-inline {
+            margin-top: 25px;
+            font-size: 18px;
+            color: var(--text);
+        }
+        
+        .price-old-inline {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+        
+        .price-new-inline {
+            color: #4A9EFF;
+            font-weight: 800;
+            font-size: 24px;
+        }
+        
+        /* Card Direito (Verde → Azul) */
+        .hero-card-right {
+            background: var(--gradient);
+            border-radius: 30px;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.3);
+        }
+        
+        .hero-person-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .hero-card-left {
+                padding: 40px 30px;
+            }
+            
+            .hero-card-right {
+                min-height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-vendec {
+                min-height: auto;
+                padding: 60px 20px 80px;
+            }
+            
+            .logo-text {
+                font-size: 42px;
+            }
+            
+            .hero-card-left {
+                padding: 30px 25px;
+            }
+            
+            .card-title {
+                font-size: 48px;
+            }
+            
+            .card-headline {
+                font-size: 28px;
+            }
+            
+            .hero-card-right {
+                min-height: 350px;
+            }
+        }
+        
+        /* Content Section */
+        .content-section {
+            background: var(--dark);
+            padding: 80px 20px;
+        }
+        
+        .content-grid-whatsapp {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .whatsapp-mockup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .whatsapp-mockup-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        
+        .content-text {
+            text-align: left;
+        }
+        
+        .content-text h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 30px;
+            color: var(--white);
+            line-height: 1.2;
+        }
+        
+        .highlight-yellow {
+            color: #E3FF0A;
+        }
+        
+        .content-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .benefits-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 18px;
+        }
+        
+        .benefits-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        
+        /* Author Section */
+        .author-section {
+            background: var(--dark);
+            padding: 80px 20px;
+        }
+        
+        .author-section h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(36px, 6vw, 56px);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .author-card {
+            background: var(--dark-lighter);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .author-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 217, 95, 0.3);
+        }
+        
+        .author-info h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .author-info p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* Price Showcase */
+        .price-showcase {
+            background: var(--dark-lighter);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .price-showcase-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .price-badge-html {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-lighter) 100%);
+            border: 2px solid var(--primary);
+            border-radius: 25px;
+            padding: 40px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.2);
+        }
+        
+        .discount-badge-inline {
+            display: inline-block;
+            background: var(--gradient-red);
+            color: var(--white);
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .price-old-text {
+            font-size: 18px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin: 20px 0 10px 0;
+        }
+        
+        .price-new-big {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(64px, 10vw, 96px);
+            color: var(--primary);
+            line-height: 1;
+            margin: 15px 0;
+            text-shadow: 0 0 40px rgba(37, 211, 102, 0.5);
+        }
+        
+        .price-installments-text {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+        
+        .security-note {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        footer p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .author-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .content-grid-whatsapp {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .content-text {
+                text-align: center;
+            }
+            
+            .benefits-list {
+                text-align: left;
+            }
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            z-index: 1000;
+            animation: pulse 2s ease-in-out infinite;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Bar -->
+    <div class="urgency-bar">
+        ⚡ OFERTA ESPECIAL POR TEMPO LIMITADO ⚡
+    </div>
+
+    <!-- Hero Section com Background e Cards -->
+    <section class="hero-vendec">
+        <!-- Background Image -->
+        <div class="hero-background"></div>
+        
+        <div class="container">
+            <!-- Título no topo -->
+            <div class="logo-container">
+                <h1 class="logo-text">WHATSAPP 10K</h1>
+            </div>
+            
+            <!-- Grid com 2 Cards -->
+            <div class="hero-cards-grid">
+                
+                <!-- Card Esquerdo (Preto com Texto) -->
+                <div class="hero-card-left">
+                    <div class="card-label">VENDA$ ATRAVÉS DO</div>
+                    <h1 class="card-title">WHATSAPP</h1>
+                    
+                    <h2 class="card-headline">TRANSFORME O WHATSAPP EM UMA MÁQUINA DE VENDAS</h2>
+                    
+                    <p class="card-subtitle">
+                        Domine a mesma estratégia que o <strong>Adonias Santos</strong> utiliza para <strong>faturar milhares de reais nos últimos anos</strong> apenas com este aplicativo.
+                    </p>
+                    
+                    <a href="#checkout" class="cta-button-yellow">QUERO ME INSCREVER →</a>
+                    
+                    <div class="price-inline">
+                        De: R$ <span class="price-old-inline">247,00</span> por R$ <span class="price-new-inline">37,00</span>
+                    </div>
+                </div>
+                
+                <!-- Card Direito (Verde Neon com Imagem) -->
+                <div class="hero-card-right">
+                    <img src="assets/images/hero-person.png" alt="Vendedor de Sucesso" class="hero-person-image">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section com Mockup WhatsApp -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid-whatsapp">
+                <div class="whatsapp-mockup-container">
+                    <img src="assets/images/mockup-whatsapp-conversa.png" alt="Conversas de Vendas no WhatsApp" class="whatsapp-mockup-image">
+                </div>
+                <div class="content-text">
+                    <h2><span class="highlight-yellow">Venda todos os dias usando o WhatsApp</span> como sua melhor ferramenta!</h2>
+                    
+                    <p>Você terá acesso a um método completo e prático, que abrange desde a prospecção e abordagem de clientes até <strong>técnicas avançadas de negociação, fechamento e pós-venda.</strong></p>
+                    
+                    <p>Aprenda a criar mensagens <strong>persuasivas</strong>, construir relacionamentos <strong>duradouros</strong>, lidar com <strong>objeções</strong> e aumentar sua taxa de conversão.</p>
+
+                    <p>Você ainda poderá comprar o módulo de <strong>scripts de alta conversão e modelos prontos para copiar</strong>, colar e adaptar à sua realidade, acelerando seus resultados e <strong>transformando seu WhatsApp em uma verdadeira máquina de vendas</strong>.</p>
+                    
+                    <ul class="benefits-list">
+                        <li>Domine as Vendas no WhatsApp</li>
+                        <li>Aumente sua conversão</li>
+                        <li>Reative Leads Frios que não respondem</li>
+                    </ul>
+                    
+                    <a href="#checkout" class="cta-button">QUERO ME INSCREVER</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Author Section -->
+    <section class="author-section">
+        <div class="container">
+            <h2>QUEM É ADONIAS SANTOS</h2>
+            <div class="author-card">
+                <img src="assets/images/foto-adonias.jpg" alt="Adonias Santos" class="author-photo">
+                <div class="author-info">
+                    <h3>Adonias Santos</h3>
+                    <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 20px;">
+                        Especialista em Vendas Pelo WhatsApp desde 2018
+                    </p>
+                    <p><strong>7 anos</strong> vendendo exclusivamente pelo WhatsApp</p>
+                    <p>Fechou mais de <strong>2.000 contratos</strong> de serviços</p>
+                    <p>Especialista em <strong>vendas consultivas de alto valor</strong></p>
+                    <p style="margin-top: 25px; line-height: 1.8;">
+                        "Depois de fechar milhares de vendas só pelo WhatsApp, decidi sistematizar tudo que funciona e criar um método replicável. O resultado é o WhatsApp 10K."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Showcase -->
+    <section class="price-showcase">
+        <div class="container">
+            <div class="price-showcase-content">
+                <div class="price-badge-html">
+                    <span class="discount-badge-inline">85% DE DESCONTO!</span>
+                    <p class="price-old-text">De R$ 297,00 por apenas</p>
+                    <h2 class="price-new-big">R$ 37</h2>
+                    <p class="price-installments-text">ou 12x de R$ 3,58</p>
+                </div>
+                
+                <a href="#checkout" class="cta-button" style="font-size: 22px; padding: 25px 60px; margin-top: 30px;">
+                    QUERO GARANTIR MINHA VAGA AGORA
+                </a>
+                
+                <p class="security-note" style="margin-top: 20px;">
+                    🔒 Pagamento 100% Seguro | ⚡ Acesso Imediato
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 WhatsApp 10K - Benitech Lab LTDA. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 12px;">
+                CNPJ: 63.323.126/0001-17 | Termos de Uso | Política de Privacidade
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5571999999999?text=Olá! Tenho interesse no WhatsApp 10K" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
