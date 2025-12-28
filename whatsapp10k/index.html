@@ -109,22 +109,6 @@
             z-index: 1;
         }
         
-        .logo-container {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .logo-text {
-            font-family: 'Bebas Neue', cursive;
-            font-size: clamp(48px, 8vw, 72px);
-            color: #4A9EFF;
-            letter-spacing: 3px;
-            margin: 0;
-            text-shadow: 0 0 30px rgba(74, 158, 255, 0.5);
-        }
-        
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -147,9 +131,12 @@
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
             border-radius: 30px;
-            padding: 50px 40px;
+            padding: 60px 40px 50px 40px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .card-label {
@@ -157,7 +144,7 @@
             font-weight: 600;
             letter-spacing: 2px;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-transform: uppercase;
         }
         
@@ -166,7 +153,7 @@
             font-size: clamp(48px, 6vw, 80px);
             line-height: 0.9;
             color: #4A9EFF;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             letter-spacing: 2px;
         }
         
@@ -175,14 +162,14 @@
             font-size: clamp(28px, 4vw, 42px);
             line-height: 1.2;
             color: var(--white);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .card-subtitle {
             font-size: 16px;
             line-height: 1.7;
             color: var(--text-muted);
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
         
         .card-subtitle strong {
@@ -235,7 +222,7 @@
         }
         
         .price-inline {
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 18px;
             color: var(--text);
         }
@@ -293,10 +280,6 @@
                 padding: 60px 20px 80px;
             }
             
-            .logo-text {
-                font-size: 42px;
-            }
-            
             .hero-card-left {
                 padding: 30px 25px;
             }
@@ -318,6 +301,46 @@
         .content-section {
             background: var(--dark);
             padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Efeitos de fundo */
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(74, 158, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .content-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(30, 91, 168, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            pointer-events: none;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-30px, -30px);
+            }
         }
         
         .content-grid-whatsapp {
@@ -327,6 +350,8 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .whatsapp-mockup-container {
@@ -532,7 +557,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #4A9EFF;
+            background: #25D366;
             color: white;
             width: 60px;
             height: 60px;
@@ -541,11 +566,17 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            box-shadow: 0 4px 20px rgba(74, 158, 255, 0.4);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             cursor: pointer;
             z-index: 1000;
             animation: pulse 2s ease-in-out infinite;
             text-decoration: none;
+        }
+        
+        .whatsapp-icon {
+            width: 35px;
+            height: 35px;
+            filter: brightness(0) invert(1);
         }
         
         .whatsapp-float:hover {
@@ -566,11 +597,6 @@
         <div class="hero-background"></div>
         
         <div class="container">
-            <!-- Título no topo -->
-            <div class="logo-container">
-                <h1 class="logo-text">WHATSAPP 10K</h1>
-            </div>
-            
             <!-- Grid com 2 Cards -->
             <div class="hero-cards-grid">
                 
@@ -684,7 +710,7 @@
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/5571999999999?text=Olá! Tenho interesse no WhatsApp 10K" class="whatsapp-float" target="_blank">
-        💬
+        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
     <!-- JavaScript -->
