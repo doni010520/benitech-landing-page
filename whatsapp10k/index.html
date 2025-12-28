@@ -13,8 +13,8 @@
     
     <style>
         :root {
-            --primary: #25D366;
-            --primary-dark: #128C7E;
+            --primary: #4A9EFF;
+            --primary-dark: #1E5BA8;
             --secondary: #FF3D00;
             --blue-accent: #1E5BA8;
             --blue-light: #4A9EFF;
@@ -23,9 +23,9 @@
             --text: #E8EDF5;
             --text-muted: #9BAAC4;
             --white: #FFFFFF;
-            --gradient: linear-gradient(135deg, #25D366 0%, #1E5BA8 100%);
+            --gradient: linear-gradient(135deg, #4A9EFF 0%, #1E5BA8 100%);
             --gradient-red: linear-gradient(135deg, #FF3D00 0%, #FF6B35 100%);
-            --gradient-green: linear-gradient(135deg, #25D366 0%, #5BF595 100%);
+            --gradient-blue: linear-gradient(135deg, #4A9EFF 0%, #5AAFFF 100%);
         }
         
         * {
@@ -60,8 +60,8 @@
         }
         
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(37, 211, 102, 0.6); }
+            0%, 100% { box-shadow: 0 0 20px rgba(74, 158, 255, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(74, 158, 255, 0.6); }
         }
         
         /* Urgency Bar */
@@ -105,7 +105,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(18, 140, 126, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(30, 91, 168, 0.7) 100%);
             z-index: 1;
         }
         
@@ -119,10 +119,10 @@
         .logo-text {
             font-family: 'Bebas Neue', cursive;
             font-size: clamp(48px, 8vw, 72px);
-            color: #25D366;
+            color: #4A9EFF;
             letter-spacing: 3px;
             margin: 0;
-            text-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+            text-shadow: 0 0 30px rgba(74, 158, 255, 0.5);
         }
         
         .container {
@@ -192,8 +192,8 @@
         
         .cta-button-yellow {
             display: inline-block;
-            background: var(--gradient-green);
-            color: var(--dark);
+            background: var(--gradient-blue);
+            color: var(--white);
             font-weight: 800;
             font-size: 18px;
             padding: 18px 40px;
@@ -202,13 +202,36 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 30px rgba(74, 158, 255, 0.4);
         }
         
         .cta-button-yellow:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
-            background: linear-gradient(135deg, #34E87F 0%, #6BFFA7 100%);
+            box-shadow: 0 15px 40px rgba(74, 158, 255, 0.6);
+            background: linear-gradient(135deg, #5AAFFF 0%, #6BBFFF 100%);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-blue);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 18px;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(74, 158, 255, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(74, 158, 255, 0.6);
+            background: linear-gradient(135deg, #5AAFFF 0%, #6BBFFF 100%);
         }
         
         .price-inline {
@@ -228,7 +251,7 @@
             font-size: 24px;
         }
         
-        /* Card Direito (Verde → Azul) */
+        /* Card Direito (Azul Gradiente) */
         .hero-card-right {
             background: var(--gradient);
             border-radius: 30px;
@@ -238,7 +261,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 20px 60px rgba(74, 158, 255, 0.4);
         }
         
         .hero-person-image {
@@ -331,7 +354,7 @@
         }
         
         .highlight-yellow {
-            color: #E3FF0A;
+            color: #4A9EFF;
         }
         
         .content-text p {
@@ -392,7 +415,7 @@
             width: 100%;
             height: auto;
             border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 217, 95, 0.3);
+            box-shadow: 0 10px 40px rgba(74, 158, 255, 0.3);
         }
         
         .author-info h3 {
@@ -427,7 +450,7 @@
             border-radius: 25px;
             padding: 40px 30px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.2);
+            box-shadow: 0 10px 40px rgba(74, 158, 255, 0.2);
         }
         
         .discount-badge-inline {
@@ -456,7 +479,7 @@
             color: var(--primary);
             line-height: 1;
             margin: 15px 0;
-            text-shadow: 0 0 40px rgba(37, 211, 102, 0.5);
+            text-shadow: 0 0 40px rgba(74, 158, 255, 0.5);
         }
         
         .price-installments-text {
@@ -509,7 +532,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #25D366;
+            background: #4A9EFF;
             color: white;
             width: 60px;
             height: 60px;
@@ -518,7 +541,7 @@
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 20px rgba(74, 158, 255, 0.4);
             cursor: pointer;
             z-index: 1000;
             animation: pulse 2s ease-in-out infinite;
