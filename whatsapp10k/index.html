@@ -518,6 +518,89 @@
             color: var(--text-muted);
         }
         
+        /* FAQ Section */
+        .faq-section {
+            background: var(--dark);
+            padding: 80px 20px;
+        }
+        
+        .faq-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(36px, 6vw, 56px);
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--dark-lighter);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 25px 30px;
+            background: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--primary);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+            min-width: 24px;
+            text-align: center;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 30px 25px 30px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin: 0;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -698,6 +781,59 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">PERGUNTAS FREQUENTES</h2>
+            
+            <div class="faq-container">
+                <!-- Pergunta 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O que é o curso Vendas pelo WhatsApp?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>É um treinamento completo que ensina as melhores técnicas e estratégias para você vender mais e melhor usando o WhatsApp, desde a abordagem inicial até o fechamento e pós-venda.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Para quem é o curso?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para qualquer pessoa que queira usar o WhatsApp como uma ferramenta poderosa de vendas, seja você um empreendedor, profissional autônomo, vendedor ou gestor de vendas.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais os principais benefícios do curso?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aumento das vendas, otimização do tempo, melhora no relacionamento com clientes, aprendizado de técnicas de negociação e persuasão, e acesso a scripts e modelos prontos para usar.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como o curso funciona?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O curso é 100% online, com aulas gravadas e materiais complementares, objetivas, dinâmicas e mão na massa, permitindo que você estude no seu ritmo e de onde estiver. São 13 aulas, de 15min em média, com um total aproximado de 3h de duração.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -725,6 +861,24 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+            });
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Fecha todos os outros itens
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Se não estava ativo, abre o clicado
+                if (!isActive) {
+                    faqItem.classList.add('active');
                 }
             });
         });
